@@ -27,7 +27,8 @@ if ($result->num_rows > 0) {
 
     if (password_verify($password, $hashed_password)) {
         
-        $_SESSION["first_name"] = $row["first_name"] . " " .$row['last_name'] ;
+        $_SESSION["first_name"] = $row["first_name"] . " " .$row['last_name'];
+        $_SESSION["user_id"] = $row["user_id"];
         header("Location: dashboard.php"); 
         exit();
     } else {

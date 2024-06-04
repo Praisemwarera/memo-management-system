@@ -27,7 +27,7 @@
   
   session_start();
 
-
+  // var_dump($_SESSION);
   if (isset($_SESSION['first_name'])) {
     $first_name = $_SESSION['first_name'];
   } else {

@@ -62,7 +62,6 @@ if (!$result) {
     <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
       <?php
         $loggedInUserId = $_POST['user_id'];
-        var_dump($loggedInUserId);
         $stmt = $connection->prepare("SELECT * FROM memo WHERE `to` = ? ORDER BY id DESC");
         $stmt->bind_param("i", $loggedInUserId);
         $stmt->execute();
